@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorAccent">@color/orange_500</item>
+<!--        <item name="colorPrimaryVariant">@color/orange_700</item>-->
+<!--        <item name="colorOnPrimary">@color/white</item>-->
+        <item name="android:colorBackground">@color/white</item>
+<!--        <item name="colorOnBackground">@color/grey_900</item>-->
+        <!-- Status bar color. -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="drawerArrowStyle">@style/drawer_icon</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" >
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="drawer_menu" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="drawer_icon" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/orange_500</item>
+    </style>
+</resources>

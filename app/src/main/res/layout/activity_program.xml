@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:theme="@style/drawer_icon"
+    tools:context=".ProgramActivity"
+    tools:openDrawer="start" >
+
+    <!--    Toolbar-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:titleTextColor="@color/orange_500">
+        </androidx.appcompat.widget.Toolbar>
+
+        <!--    Tab Layout-->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_below="@id/toolbar"
+            android:background="@color/white"
+            app:tabIndicatorColor="@color/orange_500"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/orange_500"
+            app:tabTextAppearance="@style/tab_text"
+            app:tabTextColor="@color/orange_500" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_above="@id/tab_layout"
+            android:background="@drawable/shadow"/>
+
+        <!--    Pager-->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tab_layout"/>
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.drawerlayout.widget.DrawerLayout>
