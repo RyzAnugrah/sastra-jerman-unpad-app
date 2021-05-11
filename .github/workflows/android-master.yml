@@ -35,7 +35,7 @@ jobs:
       - name: Build debug APK
         run: bash ./gradlew assembleDebug --stacktrace
       - name: Upload APK
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-release-asset@v1
         with:
           name: app
           path: app/release/app-release.apk
