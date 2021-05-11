@@ -37,7 +37,7 @@ jobs:
       - name: Upload APK
         uses: actions/upload-release-asset@v1
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} 
+          upload_url: ${{ github.event.release.upload_url }} 
           asset_path: app/release/app-release.apk
           asset_name: Jerman.apk
           asset_content_type: application/apk 
