@@ -35,7 +35,8 @@ jobs:
       - name: Build debug APK
         run: bash ./gradlew assembleDebug --stacktrace
       - name: Upload APK
-        uses: actions/upload-release-asset@v1
+        uses: AButler/upload-release-assets@v2.0
         with:
-          name: app
-          path: app/release/app-release.apk
+          files: ${{ github.workspace }}/app/release/app-release.apk
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          release-tag: v1.0
