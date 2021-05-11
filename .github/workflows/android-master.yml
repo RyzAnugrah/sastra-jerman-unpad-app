@@ -35,9 +35,7 @@ jobs:
       - name: Build debug APK
         run: bash ./gradlew assembleDebug --stacktrace
       - name: Upload APK
-        uses: actions/upload-release-asset@v1
+        uses: AButler/upload-release-assets@v2.0
         with:
-          upload_url: ${{ github.event.release.upload_url }} 
-          asset_path: app/release/app-release.apk
-          asset_name: Jerman.apk
-          asset_content_type: application/apk 
+          files: 'artifacts/*;packages/*.nupkg'
+          release-tag: v1.0
